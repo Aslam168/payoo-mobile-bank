@@ -3,9 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS and DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- FontAwesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Home</title>
+
 </head>
-<body>
-    <h1>Welcome to home page</h1>
+<body class="bg-[#f4f5f7] pb-20">
+
+
+    <section class="bg-white max-w-lg mx-auto p-6 rounded-b-2xl">
+
+        <!-- navbar section -->
+        <nav class="max-w-lg mx-auto flex justify-between items-center pt-6 border-b-2 border-gray-200 pb-5">
+              <div class="flex items-center">
+                  <img class="h-[50px]" src="./assets/Group.png" alt="">
+                  <div class="ml-2">
+                      <h1 class="font-bold text-2xl">$<span id="balance">45000</span></h1>
+                      <p class="text-[#08080880]">Available Balance</p>
+                  </div>
+              </div>
+
+              <div>
+                  <button class="btn text-[18px] text-[#08080880] py-6"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-600"></i> Log Out</button>
+              </div>
+        </nav>
+
+
+        <!-- Payoo section -->
+
+        <div class="max-w-lg mx-auto mt-12">
+             <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+             <p class="text-[#08080880] text-[18px] mt-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </div>
+
+        <div class="max-w-lg mx-auto text-center mt-10 grid grid-cols-3 gap-5">
+             
+             <!-- first card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/wallet1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Add Money</h3>
+             </div>
+
+             <!-- second card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/send1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Cashout</h3>
+             </div>
+
+             <!-- third card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/money1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Transfer Money</h3>
+             </div>
+
+             <!-- fourth card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/bonus1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Get Bonus</h3>
+             </div>
+
+             <!-- fifth card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/purse1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Pay Bill</h3>
+             </div>
+
+             <!-- sixth card -->
+             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+                  <img class="mx-auto w-[30px]" src="./assets/transaction1.png" alt="">
+                  <h3 class="text-[#080808b3] font-semibold mt-2">Transaction</h3>
+             </div>
+
+        </div>
+
+    </section>
+
+    <!-- add money form -->
+
+    <section class="max-w-lg mx-auto p-6">
+
+         <h1 class="font-bold text-2xl  mt-10 mb-5">Add Money</h1>
+
+         <form class="bg-white p-6 rounded-3xl">
+              <div>
+                   <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Select A Bank</h1>
+                    <select id="bank" class="select border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]">
+                    <option selected>Select Bank</option>
+                    <option>AB Bank</option>
+                    <option>Dutch Bangla</option>
+                    <option>IFIC</option>
+                    <option>NRBC</option>
+                    <option>Brac</option>
+                    </select>
+              </div>
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Bank Account Number</h1>
+                  <input id="bank-number" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Enter 11 digit account number">
+              </div>
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Amount to Add</h1>
+                  <input id="addAmount" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Add Amount to withdraw">
+              </div>
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Pin number</h1>
+                  <input id="pin" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Enter 4 digit pin number">
+              </div>
+
+              <button id="addMoneyBtn" class="btn btn-active bg-[#0874f2] text-white font-bold text-xl rounded-3xl w-full h-[50px] mt-5">Add Money</button>
+
+         </form>
+
+         
+    
+    </section>
+
+    <!-- JavaScript link -->
+    <script src="home.js"></script>
 </body>
 </html>
