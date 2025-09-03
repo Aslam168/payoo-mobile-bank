@@ -10,9 +10,34 @@
 
     <!-- Website title -->
     <title>Payoo Mobile Bank</title>
-    
+
 </head>
-<body>
-    
+<body class="bg-[#f4f5f7]">
+
+<!-- login form section -->
+
+    <form class="flex justify-center items-center h-[100vh] w-[100vw] flex-col">
+
+        <div class="bg-[url('./assets/bg.png')] h-[150px] w-[320px] flex justify-center items-center">
+             <img src="./assets/Group.png" alt="">
+        </div>
+
+         <div class="bg-white p-10 rounded-3xl">
+              <label for="">Mobile Number <br>
+                  <input id="numberField" type="text" placeholder="Enter your number" class="input border-none bg-[#f4f5f7] rounded-3xl w-[300px] px-4 h-[50px] my-3" />
+              </label><br>
+
+              <label for="" class="">4 Digit Pin <br>
+                  <input id="pinField" type="text" placeholder="Enter 4 Digit Pin" class="input border-none bg-[#f4f5f7] rounded-3xl w-[300px] px-4 h-[50px] mt-3" />
+              </label> <br>
+
+              <button id="loginBtn" class="btn btn-active bg-[#0874f2] text-white font-bold text-xl rounded-3xl w-full h-[50px] mt-5">Login</button>
+         </div>
+
+    </form>
+
+    <!-- JavaScript link -->
+    <script src="./js/script.js"></script>
+
 </body>
 </html>
