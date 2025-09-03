@@ -1,4 +1,4 @@
-// add money button functionality
+// add money feature
 document.getElementById('addMoneyBtn').addEventListener('click', function(e){
     e.preventDefault();
     const validPin = 1234;
@@ -40,7 +40,7 @@ document.getElementById('addMoneyBtn').addEventListener('click', function(e){
 
 document.getElementById('withdraw-btn').addEventListener('click', function(e){
     e.preventDefault();
-    const validPin = 1111;
+    const validPin = 1234;
 
     const amountField = document.getElementById('amount-field');
     const balance = document.getElementById('balance');
@@ -113,4 +113,11 @@ cashOutCard.addEventListener('click', function(){
     cashOutForm.style.display = 'block'
     addMoneyForm.style.display = 'none'
 
+})
+
+
+// logout button functionality
+
+document.getElementById('logout-btn').addEventListener('click', function(){
+    window.location.href = 'index.html'
 })
