@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+
+    <button id="button1">button1</button>
+    <button id="button2">button2</button>
+
+    <h1 style="display: none;" id="heading1">I am heading 1</h1>
+    <h1 style="display: none;" id="heading2">I am heading 2</h1>
+
+    <script>
+
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+
+        const heading1 = document.getElementById('heading1');
+        const heading2 = document.getElementById('heading2');
+
+        button1.addEventListener('click', function(){
+            heading1.style.display = 'block';
+            heading2.style.display = 'none';
+        })
+
+        button2.addEventListener('click', function(){
+            heading2.style.display = 'block';
+            heading1.style.display = 'none';
+        })
+
+    </script>
+
+</body>
+</html>

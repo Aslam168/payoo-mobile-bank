@@ -34,3 +34,83 @@ document.getElementById('addMoneyBtn').addEventListener('click', function(e){
     document.getElementById('pin').value = '';
     
 })
+
+
+// cash out feature
+
+document.getElementById('withdraw-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    const validPin = 1111;
+
+    const amountField = document.getElementById('amount-field');
+    const balance = document.getElementById('balance');
+    const cashOutPin = parseInt(document.getElementById('cash-out-pin').value);
+    const agentNumberField = document.getElementById('agent-number-field').value;
+
+    const amountFieldValue = parseInt(amountField.value);
+    const balanceValue = parseInt(balance.innerText);
+
+    if(agentNumberField.length < 11 || agentNumberField.length > 11){
+        alert('Enter valid agent number');
+        return;
+    }
+
+    if(validPin !== cashOutPin ){
+        alert('Enter valid pin number')
+        return;
+    }
+
+    if(balanceValue === 0){
+        alert("You don't have enough money");
+        return;
+    }
+
+    if(amountFieldValue > balanceValue){
+        alert("You don't have enough money");
+        return;
+    }
+
+    const minusBalance = balanceValue - amountFieldValue;
+    balance.innerText = minusBalance;
+
+    amountField.value = '';
+    document.getElementById('cash-out-pin').value = '';
+    document.getElementById('agent-number-field').value = '';
+    
+
+})
+
+
+
+// toggle functionality
+
+const addMoneyCard = document.getElementById('add-money-card');
+const cashOutCard = document.getElementById('cashout-card');
+
+
+const addMoneyForm = document.getElementById('add-money-form');
+const cashOutForm = document.getElementById('cashout-form');
+
+addMoneyCard.addEventListener('click', function(){
+    addMoneyCard.style.border = '2px solid #0874f2';
+    addMoneyCard.style.backgroundColor = '#0874f20d';
+
+    cashOutCard.style.border = '';
+    cashOutCard.style.backgroundColor = '';
+
+    addMoneyForm.style.display = 'block'
+    cashOutForm.style.display = 'none'
+});
+
+
+cashOutCard.addEventListener('click', function(){
+    cashOutCard.style.border = '2px solid #0874f2';
+    cashOutCard.style.backgroundColor = '#0874f20d';
+
+    addMoneyCard.style.border = '';
+    addMoneyCard.style.backgroundColor = '';
+
+    cashOutForm.style.display = 'block'
+    addMoneyForm.style.display = 'none'
+
+})
