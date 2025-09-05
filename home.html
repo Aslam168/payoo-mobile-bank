@@ -45,19 +45,19 @@
         <div class="max-w-lg mx-auto text-center mt-10 grid grid-cols-3 gap-5">
              
              <!-- add money card -->
-             <div id="add-money-card" class="border-2 border-[#0808081a] rounded-xl py-8 cursor-pointer">
+             <div id="add-money-card" class="border-2 border-[#0808081a] rounded-xl py-8 cursor-pointer active-color">
                   <img class="mx-auto w-[30px]" src="./assets/wallet1.png" alt="">
                   <h3 class="text-[#080808b3] font-semibold mt-2">Add Money</h3>
              </div>
 
              <!-- cashout card -->
-             <div id="cashout-card" class="border-2 border-[#0808081a] rounded-xl py-8 cursor-pointer">
+             <div id="cashout-card" class="border-2 border-[#0808081a] rounded-xl py-8 cursor-pointer active-color">
                   <img class="mx-auto w-[30px]" src="./assets/send1.png" alt="">
                   <h3 class="text-[#080808b3] font-semibold mt-2">Cashout</h3>
              </div>
 
              <!-- transfer money card -->
-             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+             <div id="transfer-money-card" class="border-2 border-[#0808081a] rounded-xl py-8 cursor-pointer active-color">
                   <img class="mx-auto w-[30px]" src="./assets/money1.png" alt="">
                   <h3 class="text-[#080808b3] font-semibold mt-2">Transfer Money</h3>
              </div>
@@ -75,7 +75,7 @@
              </div>
 
              <!-- transaction card -->
-             <div class="border-2 border-[#0808081a] rounded-xl py-8">
+             <div id="transaction-card" class="border-2 cursor-pointer border-[#0808081a] rounded-xl py-8 active-color">
                   <img class="mx-auto w-[30px]" src="./assets/transaction1.png" alt="">
                   <h3 class="text-[#080808b3] font-semibold mt-2">Transaction</h3>
              </div>
@@ -86,7 +86,7 @@
 
     <!-- add money form -->
 
-    <section id="add-money-form" class="max-w-lg mx-auto p-6 hidden">
+    <section id="add-money-form" class="max-w-lg mx-auto p-6 form hidden">
 
          <h1 class="font-bold text-2xl  mt-10 mb-5">Add Money</h1>
 
@@ -129,7 +129,7 @@
 
     <!-- cashout form -->
 
-    <section id="cashout-form" class="max-w-lg mx-auto p-6 ">
+    <section id="cashout-form" class="max-w-lg mx-auto p-6 form hidden">
 
          <h1 class="font-bold text-2xl  mt-10 mb-5">Cash Out</h1>
 
@@ -155,6 +155,53 @@
 
          </form>
     
+    </section>
+
+
+    <!-- transfer money form -->
+
+    <section id="transfer-money-form" class="max-w-lg mx-auto p-6 form hidden">
+
+         <h1 class="font-bold text-2xl  mt-10 mb-5">Transfer Money</h1>
+
+         <form class="bg-white p-6 rounded-3xl">
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">User Account Number</h1>
+                  <input id="user-account-number-field" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Enter 11 digit  number">
+              </div>
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Amount</h1>
+                  <input id="transfer-amount-field" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Enter amount to transfer">
+              </div>
+
+              <div>
+                  <h1 class="text-[#080808b3] font-semibold text-xl mt-5 mb-2">Pin Number</h1>
+                  <input id="transfer-pin" class="input border-none bg-[#f4f5f7] rounded-3xl w-full px-4 h-[50px]" type="text" placeholder="Enter 4 digit pin number">
+              </div>
+
+              <button id="transfer-btn" class="btn btn-active bg-[#0874f2] text-white font-bold text-xl rounded-3xl w-full h-[50px] mt-5">
+              Send Now</button>
+
+         </form>
+    
+    </section>
+
+
+    <!-- transaction form -->
+
+    <section id="transaction-form" class="max-w-lg mx-auto hidden">
+
+         <div class="flex justify-between items-center">
+              <h1 class="font-bold text-2xl  mt-10 mb-5">Transaction History</h1>
+              <p class="text-[#080808b3]">View All</p>
+         </div>
+
+         <div id="transaction-container">
+
+         </div>
+
     </section>
 
     <!-- JavaScript link -->

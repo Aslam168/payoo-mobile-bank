@@ -7,30 +7,25 @@
 </head>
 <body>
 
-    <button id="button1">button1</button>
-    <button id="button2">button2</button>
-
-    <h1 style="display: none;" id="heading1">I am heading 1</h1>
-    <h1 style="display: none;" id="heading2">I am heading 2</h1>
+    <input id="inputNumber" placeholder="Your number" type="text">
+    <input  id="inputString" placeholder="Your name" type="text" name="" id="">
+    <button id="click">click</button>
 
     <script>
 
-        const button1 = document.getElementById('button1');
-        const button2 = document.getElementById('button2');
+        function getInputValueNumber(id){
+           const inputField = document.getElementById(id);
+           const inputValue = inputField.value;
+           const inputValueConverted = parseInt(inputValue);
+           inputField.value = '';
+           return inputValueConverted;
+        }
 
-        const heading1 = document.getElementById('heading1');
-        const heading2 = document.getElementById('heading2');
-
-        button1.addEventListener('click', function(){
-            heading1.style.display = 'block';
-            heading2.style.display = 'none';
+        document.getElementById('click').addEventListener('click', function(){
+            getInputValue("inputNumber");
+            getInputValue("inputString");
         })
-
-        button2.addEventListener('click', function(){
-            heading2.style.display = 'block';
-            heading1.style.display = 'none';
-        })
-
+         
     </script>
 
 </body>
